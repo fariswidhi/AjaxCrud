@@ -16,6 +16,8 @@
 
 <div class="container" style="margin-top: 50px;">
 <button class="btn btn-primary btn-act" data-name='add'  href="<?php echo base_url('Barang/add') ?>"> Tambah</button>
+<br>
+<br>
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="panel panel-default">
@@ -149,12 +151,16 @@
 		
 		$("#myModal .modal-body").load($(this).attr('href'));
 		$("#myModal").modal('show');
+		
+		$("#myModal .modal-footer").html('<button type="button" class="btn btn-danger btn-close" data-dismiss="modal">Tutup</button>')
 		}
 		if (name=='add') {
 		$("#myModal .modal-title").html("Tambah Data");
 		
 		$("#myModal .modal-body").load($(this).attr('href'));
 		$("#myModal").modal('show');
+		var href = $(this).attr("href");
+		$("#myModal .modal-footer").html('<button type="button" class="btn btn-danger btn-close" data-dismiss="modal">Tutup</button>')
 		}
 		if(name=='delete'){
 		$("#myModal .modal-title").html("Konfirmasi");		
